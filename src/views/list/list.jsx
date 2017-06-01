@@ -12,10 +12,9 @@ import {chose_data} from 'assets/chose_data.js'
 export default class list extends React.Component{
 	constructor(props){
 		super(props);
-		this.state={
-			
-		}
 		this.serchCode=this.serchCode.bind(this);
+		this.prevent=this.prevent.bind(this);
+		this.stopprevent=this.stopprevent.bind(this);
 	}
 	componentWillMount(){
 		var name=this.props.match.params.name;
@@ -33,7 +32,12 @@ export default class list extends React.Component{
 			showdata:search(data,reg)
 		}) 
 	}
-	
+	prevent(e){
+		document.querySelector('.list').style.overflow='hidden'
+	}
+	stopprevent(){
+		document.querySelector('.list').style.overflowY='auto'
+	}
 
 	render(){
 		var self=this;
@@ -60,6 +64,8 @@ export default class list extends React.Component{
 					<input type="text"
 					placeholder="Please enter your looking for..."
 					className='serch-input middle-inline_block'
+					onFocus={this.prevent}
+					onBlur={this.stopprevent}
 					onChange={this.serchCode} />
 				</header>
 				<div className="list-group container-fluid">

@@ -1,6 +1,10 @@
 .todo{
+	height:100%;
+	padding-top:1.5rem;
+	padding-bottom:1.5rem;
+	overflow-y:auto;
 	header{
-		position: fixed;
+		position: absolute;
 		top:0;
 		left: 0;
 		width: 100%;

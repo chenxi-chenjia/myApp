@@ -15,6 +15,8 @@ export default class Todo extends React.Component{
 		this.removeEnd=this.removeEnd.bind(this);
 		this.back_page=this.back_page.bind(this);
 		this.to_edit=this.to_edit.bind(this);
+		this.prevent=this.prevent.bind(this);
+		this.stopprevent=this.stopprevent.bind(this);
 	}
 	
 	//读取本地存储
@@ -101,7 +103,12 @@ export default class Todo extends React.Component{
 	to_edit(e){
 		this.props.history.push('todo/edit');
 	}
-
+	prevent(e){
+		document.querySelector('.todo').style.overflow='hidden'
+	}
+	stopprevent(){
+		document.querySelector('.todo').style.overflowY='auto'
+	}
 
 	render(){
 		var data=this.state.showdata;
@@ -145,6 +152,8 @@ export default class Todo extends React.Component{
 						<input type="text"
 						placeholder="Please enter your looking for..."
 						className='serch-input'
+						onBlur={this.stopprevent}
+						onFocus={this.prevent}
 						onChange={this.serchCode}
 						/>
 					</div>

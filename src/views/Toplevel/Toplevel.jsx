@@ -115,7 +115,7 @@ export default class Toplevel extends React.Component {
                 </div>
             ))
         return(
-            <div className="framework container-fluid">
+            <div className="toplevel container-fluid">
                 <h3 className='text-center'>{this.state.content}</h3>
                 <div className="row">
                     {el}
