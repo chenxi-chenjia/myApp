@@ -1,0 +1,54 @@
+.todo{
+	header{
+		position: fixed;
+		top:0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		background: #000;
+		height: 1rem;
+		color:#eee;
+		padding-left:.3rem;
+		padding-right:.3rem;
+		justify-content:space-between;
+		align-items:center;
+		.serch-input-box{
+			width: 100%;
+			padding-left:.3rem;
+			padding-right:.3rem;
+		}
+		input{
+			background:#fff;
+			width: 100%;
+		}
+		.icon-bianji{
+			font-size: .5rem;
+		}
+	}
+	h3.ts{
+		color:#999;
+		margin-top: 1.5rem;
+	}
+	.list-group{
+		padding-top: 1.3rem;
+		padding-bottom:2rem;
+	}
+	.list-group-item {
+	    position: relative;
+	    display: block;
+	    padding: 10px 15px;
+	    background-color: #fff;
+	    margin-bottom: -1px;
+	    border-top: 1px solid #ddd;
+	    border-bottom: 1px solid #ddd;
+	    .badge{
+	    	font-size: 14px;
+	    }
+	    p{
+    	    max-height: 20px;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+	    }
+	}
+}

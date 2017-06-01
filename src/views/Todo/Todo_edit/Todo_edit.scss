@@ -1,0 +1,84 @@
+.Todo_edit{
+	width:100%;
+	padding:1rem .3rem;
+	header{
+		height: 1rem;
+		line-height: 1rem;
+		background:#000;
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		padding:0 .3rem;
+		z-index: 0;
+		color:#fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.icon-101{
+		font-size: .4rem;
+	}
+	input,textarea{
+		border:0;
+		outline: none;
+	}
+	h4{
+		padding: .2rem 0;
+		border-bottom:1px dashed #ccc;
+		position:relative;
+	}
+	label{
+		margin:0;
+	}
+	input{
+		position:absolute;
+		width: 80%;
+		height: 100%;
+		left:1rem;
+		top:0;
+	}
+	textarea{
+		width: 100%;
+		min-height: 8rem;
+		overflow-y: auto;
+		resize:none;
+		text-indent:2em;
+	}
+	.alert{
+		position:fixed;
+		z-index: 5;
+		top:40%;
+		left:50%;
+		width: 80%;
+		background-color:rgba(0,0,0,0.65);
+		font-size: .36rem;
+		padding:.7rem .5rem;
+	    border-radius: 4px;
+		transform:translate(-50%,-50%);
+		animation-name:fadeInDown;
+		animation-duration:2s;
+		animation-timing-function:ease-in-out;
+		animation-fill-mode :forwards ;
+		color:#fff;
+		opacity: 0;
+		.iconfont{
+			font-size: .8rem;
+			margin-bottom: .5rem;
+		}
+	}
+}
+@keyframes fadeInDown{
+	0%{
+		opacity: 0;
+	}
+	15%{
+		opacity: 1;
+	}
+	85%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
