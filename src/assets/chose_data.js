@@ -3,6 +3,7 @@ import {vue_data} from 'assets/data/framework/vue_data.js'
 import {chenxi_data} from 'assets/data/framework/chenxi_data.js'
 import {bootstrap_data} from 'assets/data/framework/bootstrap_data.js'
 import {js_data} from 'assets/data/language/js_data.js'
+import {php_data} from 'assets/data/language/php_data.js'
 import {html_data} from 'assets/data/layout/html_data.js'
 import {css_data} from 'assets/data/layout/css_data.js'
 import {git_data} from 'assets/data/language/git_data.js'
@@ -37,6 +38,9 @@ export const chose_data = function  (path){
 		break;
 		case 'node':
 		data=node_data;
+		break;
+		case 'php':
+		data=php_data;
 		break;
 	}
 	return data;

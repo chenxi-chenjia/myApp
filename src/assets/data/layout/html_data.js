@@ -134,6 +134,29 @@ export const html_data=[
 	},{
 		title:'移动端 HTML5 input date 不支持 placeholder 问题',
 		content:'<input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type="date")"  id="date">'
+	},{
+		title:'H5缓存',
+		content:'1、需要在项目中新建一个后缀为 .appcache 的文件\n\
+		2、文件中开头为固定格式 CACHE MANIFEST \n\
+		#（版本号）\n\
+		CACHE（需要保存的文件）\n\
+		(文件，可以使用绝对路径和相对路径)\n\
+		3、NETWORK(不需要保存的文件，可以使用*)\n\
+		4、FALLBACK（如果无法建立网络连接替代的文件）\n\
+		5、在html文件html标签内添加<html manifest="demo.appcache">\n\
+		6、缓存大小一般不超过5M'
+	},{
+		title:'使用终端判断',
+		content:'\n\
+		var system ={ };\n\
+		var p = navigator.platform;\n\
+		system.win = p.indexOf("Win") == 0;\n\
+		system.mac = p.indexOf("Mac") == 0;\n\
+		system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);\n\
+		if(!(system.win||system.mac||system.xll)){ \n\
+			 window.location.href="./index.html";\n\
+		}\n\
+  	'
 	}
 ]
 html_data.forEach((v,i)=>{

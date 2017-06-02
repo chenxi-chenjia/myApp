@@ -25,7 +25,8 @@ export default class Todo extends React.Component{
 		this.setState({
 			data:data,
 			showdata:data,
-			reg:new RegExp()
+			reg:new RegExp(),
+			mask_flag:false
 		})
 	}
 
@@ -104,10 +105,14 @@ export default class Todo extends React.Component{
 		this.props.history.push('todo/edit');
 	}
 	prevent(e){
-		document.querySelector('.todo').style.overflow='hidden'
+		this.setState({
+			mask_flag:true
+		})
 	}
 	stopprevent(){
-		document.querySelector('.todo').style.overflowY='auto'
+		this.setState({
+			mask_flag:false
+		})
 	}
 
 	render(){
@@ -141,7 +146,11 @@ export default class Todo extends React.Component{
 		}else{
 			var el=<h3 className='ts text-center'>Sorry,you have nothing in this.</h3>
 		}
-
+		if(this.state.mask_flag){
+			var mask=<div className="mask"></div>
+		}else{
+			var mask=false;
+		}
 		return(
 			<div className='todo'>
 				<header>
@@ -163,6 +172,7 @@ export default class Todo extends React.Component{
 				</header>
 				<div className="list-group container-fluid">
 					{el}
+					{mask}
 				</div>
 			</div>
 		)

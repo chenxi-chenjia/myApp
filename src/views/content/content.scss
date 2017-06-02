@@ -1,4 +1,6 @@
 .content{
+	height:100%;
+	overflow:hidden;
 	header{
 		background:#000;
 		color:#eee;
@@ -6,6 +8,10 @@
 		padding-bottom:.1rem;
 		padding-left:15px;
 		padding-right:15px;
+	}
+	.container-fluid{
+		height: 100%;
+		overflow-y: auto;
 	}
 	p{
 		text-indent: 2em;

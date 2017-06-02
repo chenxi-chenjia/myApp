@@ -41,7 +41,7 @@ export default class Content extends React.Component{
 					></div>
 				</header>
 				<div className="container-fluid">
-					<div className="content">
+					<div className="content-inner">
 						<div className="page-header">
 							<h3 className='text-center'>
 								{this.state.data.title}

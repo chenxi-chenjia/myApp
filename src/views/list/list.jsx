@@ -22,7 +22,8 @@ export default class list extends React.Component{
 		this.setState({
 			data:data,
 			showdata:data,
-			name:name
+			name:name,
+			mask_flag:false
 		})
 	}
 	serchCode(e){
@@ -33,10 +34,14 @@ export default class list extends React.Component{
 		}) 
 	}
 	prevent(e){
-		document.querySelector('.list').style.overflow='hidden'
+		this.setState({
+			mask_flag:true
+		})
 	}
 	stopprevent(){
-		document.querySelector('.list').style.overflowY='auto'
+		this.setState({
+			mask_flag:false
+		})
 	}
 
 	render(){
@@ -58,6 +63,11 @@ export default class list extends React.Component{
 		}else{
 			var el=<h3 className='ts text-center'>Sorry,I search nothing.</h3>
 		}
+		if(this.state.mask_flag){
+			var mask=<div className="mask"></div>
+		}else{
+			var mask=null;
+		}
 		return(
 			<div className="list" >
 				<header className='text-center middle-group'>
@@ -70,6 +80,7 @@ export default class list extends React.Component{
 				</header>
 				<div className="list-group container-fluid">
 					{el}
+					{mask}
 				</div>
 			</div>
 		)

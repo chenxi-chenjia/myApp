@@ -1,9 +1,81 @@
 //color选项
+$Hwidth:320px,360px,375px,412px,414px,768px;
+$Swidth:750px;
+@each $i in $Hwidth{
+    @media screen and (min-width:#{$i}){
+        html{
+            font-size:100px * $i / $Swidth;
+        }
+    } 
+}
+
 $primary: #09BB07;
 $success: #09BB07;
 $danger:#E64340;
-$border_radius:4px;
+$border_radius:.08rem;
 
+@media screen and (min-width:768px){
+	$border_radius:4px;
+	.container-fluid{
+		padding-left:15px;
+		padding-right:15px;
+	}
+	body{
+		font-size:14px;
+	}
+	h1,.h1{
+		font-size: 36px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-weight: 400;
+	}
+	h2,.h2{
+		font-size: 30px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-weight: 400;
+	}
+	h3,.h3{
+		font-size: 24px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		font-weight:400;
+	}
+	h4,.h4{
+		font-size:18px;
+		margin-top:10px;
+		margin-bottom:5px;
+		font-weight:400;
+	}
+	h5,.h5{
+		font-size:16px;
+		margin-top:10px;
+		margin-bottom:5px;
+		font-weight:400;
+	}
+	h6,.h6{
+		font-size:12px;
+		margin-top:10px;
+		margin-bottom:5px;
+		font-weight:100;
+	}
+	p{
+		margin-top:10px;
+		margin-bottom:5px;
+	}
+	.row{
+		margin-left:-15px;
+		margin-right:-15px;
+	}
+	.btn{
+		font-size: 16px;
+		padding:6px 12px;
+	}
+	input[type="number"],input[type="text"],input[type="tel"],input[type="password"],input[type="emile"],,input[type="url"],,input[type="range"],,input[type="date"]{
+		padding:10px 6px;
+		font-size:16px;
+	}
+}
 
 *{
 	padding:0;
@@ -26,58 +98,58 @@ a{
 }
 body{
 	color: #333;
-	font-size: 14px;
+	font-size: .28rem;
 	background-color: #fff;
 	font-family: 'PingFangSC-Regular', sans-serif,'Microsoft YaHei';
 	font-weight:400;
-	line-height:25px;
+	line-height:1.42857143;
     -webkit-overflow-scrolling: touch;
 }
 h1,.h1{
-	font-size: 36px;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	font-size: .72rem;
+	margin-top: .4rem;
+	margin-bottom: .2rem;
 	font-weight: 400;
-	line-height: 45px;
+	line-height: 1.1;
 }
 h2,.h2{
-	font-size: 30px;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	font-size: .6rem;
+	margin-top: .4rem;
+	margin-bottom: .2rem;
 	font-weight: 400;
-	line-height: 40px;
+	line-height: 1.1;
 }
 h3,.h3{
-	font-size: 24px;
-	margin-top: 20px;
-	margin-bottom: 10px;
+	font-size: .48rem;
+	margin-top: .4rem;
+	margin-bottom: .2rem;
 	font-weight:400;
-	line-height:35px;
+	line-height:1.1;
 }
 h4,.h4{
-	font-size:18px;
-	margin-top:10px;
-	margin-bottom:5px;
+	font-size:.36rem;
+	margin-top:.2rem;
+	margin-bottom:.1rem;
 	font-weight:400;
-	line-height:30px;
+	line-height:1.1;
 }
 h5,.h5{
-	font-size:16px;
-	margin-top:10px;
-	margin-bottom:5px;
+	font-size:.32rem;
+	margin-top:.2rem;
+	margin-bottom:.1rem;
 	font-weight:400;
-	line-height:25px;
+	line-height:1.1;
 }
 h6,.h6{
-	font-size:12px;
-	margin-top:10px;
-	margin-bottom:5px;
+	font-size:.24rem;
+	margin-top:.2rem;
+	margin-bottom:.1rem;
 	font-weight:100;
-	line-height:25px;
+	line-height:1.1;
 }
 p{
-	margin-top:10px;
-	margin-bottom:5px;
+	margin-top:.2rem;
+	margin-bottom:.1rem;
 }
 
 body:after,body:before,.container:after,.container:before,.container-fluid:before,.container-fluid:after,.row:before,.row:after,.clearfix:before,.clearfix:after,.btn:after,.btn:before,.btn-group:before,.btn-group:after,.middle-group:before,.middle-group:after,{
@@ -94,15 +166,16 @@ body:after,body:before,.container:after,.container:before,.container-fluid:befor
 }
 .container-fluid{
 	width:100%;
-	padding-left:15px;
-	padding-right:15px;
+	padding-left:.3rem;
+	padding-right:.3rem;
 }
+
 .container:after,.container-fluid:after,.row:after,.clearfix:after{
 	clear:both;
 }
 .row{
-	margin-left:-15px;
-	margin-right:-15px;
+	margin-left:-.3rem;
+	margin-right:-.3rem;
 }
 @for $i from 1 to 12{
 	.col-#{$i}{
@@ -128,8 +201,8 @@ li,dt,dd{
 	display:inline-block;
 	border-radius:$border_radius;
 	cursor:pointer;
-	font-size:16px;
-	padding:6px 12px; 
+	font-size:.32rem;
+	padding:.12rem .24rem; 
 	position:relative;
 	overflow:hidden;
 	&:after{
@@ -199,8 +272,8 @@ input{
 	-moz-appearance:textfield;
 }
 input[type="number"],input[type="text"],input[type="tel"],input[type="password"],input[type="emile"],,input[type="url"],,input[type="range"],,input[type="date"]{
-	padding:10px 6px;
-	font-size:16px;
+	padding:.1rem .2rem;
+	font-size:.32rem;
 	border-radius:$border_radius;
 	border:1px solid #ccc;
 }
@@ -221,8 +294,8 @@ select{
 }
 input[type=checkbox].flag{
 	position: relative;
-    width: 52px;
-    height: 32px;
+    width: 1.02rem;
+    height: .64rem;
     border: 1px solid #DFDFDF;
     outline: 0;
     border-radius: 16px;
@@ -235,8 +308,8 @@ input[type=checkbox].flag{
 	    position: absolute;
 	    top: 0;
 	    left: 0;
-	    width: 50px;
-	    height: 30px;
+	    width: 1rem;
+	    height: .6rem;
 	    border-radius: 15px;
 	    background-color: #FDFDFD;
 	    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
@@ -249,9 +322,9 @@ input[type=checkbox].flag{
 	    position: absolute;
 	    top: 0;
 	    left: 0;
-	    width: 30px;
-	    height: 30px;
-	    border-radius: 15px;
+	    width: .6rem;
+	    height: .6rem;
+	    border-radius: .3rem;
 	    background-color: #FFFFFF;
 	    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 	    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
@@ -268,8 +341,8 @@ input[type=checkbox].flag:checked{
 	    transform: scale(0);
     }
     &:after{
-    	-webkit-transform: translateX(20px);
-	    transform: translateX(20px);
+    	-webkit-transform: translateX(.4rem);
+	    transform: translateX(.4rem);
     }
 }
 
@@ -365,12 +438,4 @@ input[type=checkbox].flag:checked{
 		transform:rotate(45deg);
 	}
 }
-$Hwidth:320px,360px,375px,412px,414px,768px;
-$Swidth:750px;
-@each $i in $Hwidth{
-    @media screen and (min-width:#{$i}){
-        html{
-            font-size:100px * $i / $Swidth;
-        }
-    } 
-}
+

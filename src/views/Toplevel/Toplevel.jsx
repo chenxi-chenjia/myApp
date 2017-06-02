@@ -35,6 +35,10 @@ function data_flag (path){
             to:'language/node',
             icl:'icon-nodejs',
             val:'NODE.JS'
+        },{
+            to:'language/php',
+            icl:'icon-php',
+            val:'PHP'
         }
     ];
     var layout_data=[
@@ -78,7 +82,7 @@ export default class Toplevel extends React.Component {
             content='Here are some of the mainstream frameworks and my own framework.';
             break;
             case 'language':
-            content="Now I'm just learning JavaScript";
+            content="Notes on programming languages";
             break;
             case 'layout':
             content='Layout is an ability to continually improve';
