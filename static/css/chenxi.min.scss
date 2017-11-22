@@ -37,7 +37,7 @@ body{
 	color: #333;
 	font-size: .28rem;
 	background-color: #fff;
-	font-family: 'PingFangSC-Regular', sans-serif,'Microsoft YaHei';
+	font-family: 'PingFangSC-Regular','Microsoft YaHei', sans-serif;
 	font-weight:400;
 	line-height:1.42857143;
     -webkit-overflow-scrolling: touch;
@@ -95,7 +95,7 @@ body:after,body:before,.container:after,.container:before,.container-fluid:befor
 }
 
 .container{
-	width:1200px;
+	width:1210px;
 	padding-left:15px;
 	padding-right:15px;
 	margin-left:auto;
@@ -376,7 +376,30 @@ input[type=checkbox].flag:checked{
 	}
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////
+// flex 布局
+.flex{
+	display: flex;
+	align-items: center;
+}
+.flex-column {
+	display: flex;
+	align-items: center;
+	flex-direction: column ;
+}
+.flex-end{
+	justify-content: flex-end;
+}
+.flex-center {
+	justify-content: center;
+}
+.flex-between {
+	justify-content: space-between;
+}
+.flex-around {
+	justify-content: space-around;
+}
+/////////////////////////////////////////////////////////////////////////////////
 @media screen and (min-width:768px){
 	.container-fluid{
 		padding-left:15px;
